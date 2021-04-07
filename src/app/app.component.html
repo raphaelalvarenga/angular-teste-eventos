@@ -1,2 +1,7 @@
 <!-- <app-formulario></app-formulario> -->
+
+<h1>Amarração de pai para filho e evento de filho para pai</h1>
 <app-tabela [funcionarios] = "funcionarios" (funcionariosEvent) = "deletarFuncionario($event)"></app-tabela>
+<hr/>
+<h1>Uma amarração só para a ida e volta</h1>
+<app-tabela-two-way [(funcionarios)] = "funcionarios"></app-tabela-two-way>

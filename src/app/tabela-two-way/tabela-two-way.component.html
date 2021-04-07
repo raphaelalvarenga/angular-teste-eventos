@@ -1,0 +1,27 @@
+<table *ngIf = "funcionarios.length > 0; else semRegistros">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Profissão</th>
+            <th>Salário</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let funcionario of funcionarios">
+            <td>{{ funcionario.id }}</td>
+            <td>{{ funcionario.nome }}</td>
+            <td>{{ funcionario.profissao }}</td>
+            <td>{{ funcionario.salario }}</td>
+            <td>
+                <button (click) = "deletarFuncionario(funcionario)">Deletar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #semRegistros>
+    <h1>Não existem registros!</h1>
+</ng-template>
